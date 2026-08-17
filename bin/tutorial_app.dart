@@ -1,11 +1,41 @@
 import 'package:tutorial_app/utils.dart' as utils;
 
 void main(List<String> arguments) {
-  switchCaseTutorial("Lunes");
+  loopsTutorials();
+}
+
+void loopsTutorials() {
+  // (inicializacion; condicion; incremento)
+  for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+      continue; // Salta a la siguiente iteración del bucle cuando llega a esta línea
+    }
+
+    print("Número: $i");
+  }
+
+  int count = 1;
+  // Repite el bloque de código mientras la condición se cumpla
+  while (count <= 5) {
+    print("Contador: $count");
+    count++;
+  }
+
+  // Primero ejecuta el código y después comprueba la condición para repetir
+  do {
+    print("Contador: $count");
+
+    if (count == 8) {
+      break; // Detiene y sale del bucle cuando llega a esta línea
+    }
+
+    count++;
+  } while (count <= 10);
 }
 
 void switchCaseTutorial(String day) {
-  switch (day) { // variable que quieres comprobar
+  switch (day) {
+    // variable que quieres comprobar
     case "Lunes": // posible valor-caso
       print("Suerte mai fren");
       break; // Termina el switch
