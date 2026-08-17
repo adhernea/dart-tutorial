@@ -2,12 +2,16 @@ import 'package:tutorial_app/classes/person.dart';
 import 'package:tutorial_app/utils.dart' as utils;
 
 void main(List<String> arguments) {
-  Person person = Person("Ana", 20); // Instancia
-
-  print(person);      // Instance of 'Person'
-  print(person.name); // Ana
-  print(person.age);  // 20
+  //Instancia con parámetros nombrados
+  Person person = Person(name: "Ana", age: 20);
+  //person.name = "Pedro";
+  person.introduceMyself(); // Hola, soy Pedro
 }
+
+
+
+
+
 
 
 void loopsTutorials() {

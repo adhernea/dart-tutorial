@@ -1,8 +1,16 @@
 class Person {
   // Atributos
-  String name;
+  final String _name;
   int age;
 
-  // Constructor
-  Person(this.name, this.age);
+  // Constructor abreviado
+  Person({
+    required this._name,
+    required this.age
+  });
+
+  void introduceMyself() {
+    print("Hola, soy $_name");
+  }
 }
+
