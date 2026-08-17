@@ -1,7 +1,53 @@
 import 'package:tutorial_app/utils.dart' as utils;
 
 void main(List<String> arguments) {
-  // Iteración en listas
+  switchCaseTutorial("Lunes");
+}
+
+void switchCaseTutorial(String day) {
+  switch (day) { // variable que quieres comprobar
+    case "Lunes": // posible valor-caso
+      print("Suerte mai fren");
+      break; // Termina el switch
+    case "Viernes":
+      print("¡Ya casi a descansar!");
+      break;
+    case "Sábado":
+    case "Domingo del Señor": // Mismo código para dos casos
+      print("¿Una playita o qué?");
+      break;
+    default: // Llega aquí si la variable no coincide con ningún caso
+      print("Los animales de dos en dos, uó, uó...");
+  }
+}
+
+void ifElseTutorial(double? score) {
+  if (score == null) {
+    print("¡Puntuación no recibida!");
+    return;
+  } else if (score < 0 || score > 100) {
+    print("¡Puntuación no válida!");
+  }
+
+  // && como operador AND
+  // || como operador OR
+  // != como operador Distinto De
+  // ! como operador NOT
+
+  if (score >= 90) {
+    print("Excelente");
+  } else if (score >= 70) {
+    print("Notable");
+  } else if (score == 60) {
+    print("Notable");
+  } else if (score >= 50) {
+    print("Justito");
+  } else {
+    print("Meh");
+  }
+}
+
+void listIterationTutorial() {
   const names = ["Chachi", "Pistachi", "Lerendi"];
 
   // Para recorrer una lista con bucle for
