@@ -1,8 +1,14 @@
+import 'package:tutorial_app/classes/person.dart';
 import 'package:tutorial_app/utils.dart' as utils;
 
 void main(List<String> arguments) {
-  loopsTutorials();
+  Person person = Person("Ana", 20); // Instancia
+
+  print(person);      // Instance of 'Person'
+  print(person.name); // Ana
+  print(person.age);  // 20
 }
+
 
 void loopsTutorials() {
   // (inicializacion; condicion; incremento)
