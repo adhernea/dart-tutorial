@@ -1,21 +1,22 @@
+import 'package:tutorial_app/classes/inheritance/dog.dart';
 import 'package:tutorial_app/classes/person.dart';
 import 'package:tutorial_app/classes/rectangle.dart';
 import 'package:tutorial_app/utils.dart' as utils;
 
 void main(List<String> arguments) {
-  Rectangle rectangle = Rectangle(5, 4);
+  Dog dog = Dog("Chalchicha", "Mamífero", "Macho");
+  dog.eat(); // El animal está comiendo
+  dog.bark(); // El perro ladra
+  print(dog.type); // Mamífero
 
-  rectangle.updateWidth = 20; // ¡IMPORTANTE el =!
-
-  print("El área es: ${rectangle.area}"); // 80.0
+  dog.move();
 }
 
-
-
-
-
-
-
+void getterSetterTutorial() {
+  Rectangle rectangle = Rectangle(5, 4);
+  rectangle.updateWidth = 20; // ¡IMPORTANTE el =!
+  print("El área es: ${rectangle.area}"); // 80.0
+}
 
 void personTutorial() {
   //Instancia con parámetros nombrados
