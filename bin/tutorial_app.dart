@@ -1,11 +1,13 @@
 import 'package:tutorial_app/classes/person.dart';
+import 'package:tutorial_app/classes/rectangle.dart';
 import 'package:tutorial_app/utils.dart' as utils;
 
 void main(List<String> arguments) {
-  //Instancia con parámetros nombrados
-  Person person = Person(name: "Ana", age: 20);
-  //person.name = "Pedro";
-  person.introduceMyself(); // Hola, soy Pedro
+  Rectangle rectangle = Rectangle(5, 4);
+
+  rectangle.updateWidth = 20; // ¡IMPORTANTE el =!
+
+  print("El área es: ${rectangle.area}"); // 80.0
 }
 
 
@@ -13,6 +15,14 @@ void main(List<String> arguments) {
 
 
 
+
+
+void personTutorial() {
+  //Instancia con parámetros nombrados
+  Person person = Person(name: "Ana", age: 20);
+  //person.name = "Pedro";
+  person.introduceMyself(); // Hola, soy Pedro
+}
 
 void loopsTutorials() {
   // (inicializacion; condicion; incremento)
