@@ -4,6 +4,10 @@ import 'package:tutorial_app/classes/rectangle.dart';
 import 'package:tutorial_app/utils.dart' as utils;
 
 void main(List<String> arguments) {
+
+}
+
+void inheritanceTutorial() {
   Dog dog = Dog("Chalchicha", "Mamífero", "Macho");
   dog.eat(); // El animal está comiendo
   dog.bark(); // El perro ladra
@@ -170,11 +174,13 @@ void listTutorial() {
 
   // Lista con objetos de diferente tipo. ¡Cuidado con esto!
   List<Object> myObjectsList = ["Hola", 18, true];
+  print(myObjectsList);
 
   // Creación de una lista constante (tipo inferido)
   // Esta lista no puede ser modificada de ninguna manera
   const myStringsList = ["Hola", "que", "tal"];
   // myStringsList.add("?"); => Da Error
+  print(myStringsList);
 
   // Esta permite modificaciones internas pero no reinicialización.
   final myNumbersList = [1, 2, 3];
