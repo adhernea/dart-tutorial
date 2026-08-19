@@ -12,6 +12,15 @@ Future<void> main() async {
 
   users.forEach(print);
 
+  updateUsers(users);
+
+  users.forEach(print);
+
+  final List<Map<String, Object?>> updatedJson = users.map((user) => user.toJson()).toList();
+  saveJsonData(updatedJson, FilesRoutes.userOutputJson);
+}
+
+void updateUsers(List<User> users) {
   User firstUser = users.first;
   firstUser.address = UserAddress(
     street: 'Calle La Inventada',
@@ -26,6 +35,4 @@ Future<void> main() async {
   if (yaizaUsers.firstOrNull != null) {
     yaizaUsers.first.age = 33;
   }
-
-  print(users);
 }

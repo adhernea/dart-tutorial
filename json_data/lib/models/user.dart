@@ -34,6 +34,19 @@ class User {
     );
   }
 
+  Map<String, Object?> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'surname': surname,
+      'email': email,
+      'age': age,
+      'active': active,
+      'roles': roles,
+      'address': address.toJson(),
+    };
+  }
+
   @override
   String toString() {
     return '''

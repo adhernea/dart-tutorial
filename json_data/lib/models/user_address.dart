@@ -19,4 +19,13 @@ class UserAddress {
       country: json['country'] as String,
     );
   }
+
+ Map<String, Object?> toJson() {
+    return {
+      'street': street,
+      'city': city,
+      'island': island,
+      'country': country,
+    };
+  }
 }
