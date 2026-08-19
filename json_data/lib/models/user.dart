@@ -5,10 +5,10 @@ class User {
   final String name;
   final String surname;
   final String email;
-  final int age;
+  int age;
   final bool active;
-  final List<String> roles;
-  final UserAddress address;
+  List<String> roles;
+  UserAddress address;
 
   User({
     required this.id,
