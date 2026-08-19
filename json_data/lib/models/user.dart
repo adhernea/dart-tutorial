@@ -20,4 +20,27 @@ class User {
     required this.roles,
     required this.address,
   });
+
+  static User fromJson(Map<String, Object?> json) {
+    return User(
+      id: json['id'] as int,
+      name: json['name'] as String,
+      surname: json['surname'] as String,
+      email: json['email'] as String,
+      age: json['age'] != null ? json['age'] as int : 0,
+      active: json['active'] as bool,
+      roles: (json['roles'] as List).cast<String>(),
+      address: UserAddress.fromJson(json['address'] as Map<String, Object?>),
+    );
+  }
+
+  @override
+  String toString() {
+    return '''
+    [$id] $name $surname, $age.
+    ${address.street}, ${address.city}, ${address.island}, ${address.country}.
+    cuenta (${active ? 'Activa' : 'Inhabilitada'}): $email.
+    roles: $roles.
+    ''';
+  }
 }

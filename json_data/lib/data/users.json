@@ -49,7 +49,7 @@
     "name": "Yaiza",
     "surname": "Sánchez Cabrera",
     "email": "yaiza.sanchez@example.com",
-    "age": 41,
+
     "active": true,
     "roles": ["user", "admin"],
     "address": {
