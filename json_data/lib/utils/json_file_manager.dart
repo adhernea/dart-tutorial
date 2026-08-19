@@ -6,3 +6,7 @@ Future<String> extractJsonContent(String route) async {
   final content = await file.readAsString();
   return content;
 }
+
+List<dynamic> parseJson(String jsonString) {
+  return jsonDecode(jsonString);
+}
